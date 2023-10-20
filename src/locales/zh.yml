@@ -1,0 +1,19 @@
+command:
+  mute:
+    description: "静音自己"
+    usage: "/mute"
+    option:
+      time:
+        description: "静音时间（分钟）"
+    messages:
+      direct: 请在群聊中使用此命令
+      too-long: 静音时间过长，请考虑不携带该选项以永久静音
+      success: 已静音
+      time: ，{time} 分钟后自动取消静音
+  unmute:
+    description: "取消静音"
+    usage: "/unmute"
+    messages:
+      direct: 请在群聊中使用此命令
+      not-muted: 机器人没有被静音
+      success: 已取消静音
