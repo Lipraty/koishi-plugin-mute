@@ -17,6 +17,8 @@ export const Config: Schema<Config> = Schema.object({
   authority: Schema.number().default(4).description('权限等级'),
 })
 
+export const inject = ['database']
+
 export function apply(ctx: Context, config: Config) {
   ctx.model.extend('channel', {
     mute: 'boolean',

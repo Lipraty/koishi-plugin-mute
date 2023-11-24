@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-mute",
   "description": "Mute your bot from chating",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,13 +9,21 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
+  "koishi": {
+    "description": {
+      "zh_CN": "🤖 让你的机器人自我禁言",
+      "en_US": "🤖 Mute your bot from chating"
+    },
+    "service": {
+      "required": ["database"]
+    }
+  },
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
   "peerDependencies": {
-    "koishi": "4.15.0"
+    "koishi": "^4.15.3"
   }
 }
