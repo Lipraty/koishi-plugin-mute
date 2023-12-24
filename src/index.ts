@@ -61,6 +61,7 @@ export function apply(ctx: Context, config: Config) {
     const { mute, muteTimer } = data
     if (muteTimer && muteTimer !== 0 && Date.now() > muteTimer) {
       await ctx.database.set('channel', { id: channelId, platform, guildId }, { mute: false, muteTimer: 0 })
+      mute = false
     }
     if (mute) return false
   }, true)
